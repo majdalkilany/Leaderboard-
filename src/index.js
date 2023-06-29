@@ -25,6 +25,7 @@ displayLost();
 const handleSubmitGame = (e) => {
   e.preventDefault();
   postGame(user.value, score.value);
+  from.reset();
 };
 const from = document.querySelector('.form-score');
 from.addEventListener('submit', handleSubmitGame);
