@@ -1,12 +1,42 @@
-export const leaderBoardList = [
-  { name: 'name', score: 80 },
-  { name: 'name', score: 70 },
-  { name: 'name', score: 90 },
-  { name: 'name', score: 95 },
-  { name: 'name', score: 80 },
-  { name: 'name', score: 70 },
-  { name: 'name', score: 90 },
-  { name: 'name', score: 95 },
-];
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from 'axios';
 
-localStorage.setItem('scores', JSON.stringify(leaderBoardList));
+const gameID = 'VOfUi7xKYlyLFLfpYSVH';
+const URI = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`;
+
+export const getScoresFromAPI = async () => {
+  try {
+    const response = await axios.get(URI);
+    const leaderBoardList = response.data.result;
+
+    console.log(leaderBoardList);
+    localStorage.setItem('scores', JSON.stringify(leaderBoardList));
+  } catch (error) {
+    console.error('Error retrieving scores:', error);
+  }
+};
+
+export const postGame = async (user, score) => {
+  try {
+    const data = JSON.stringify({
+      user,
+      score,
+    });
+
+    const config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: URI,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data,
+    };
+
+    const response = await axios(config);
+    console.log(response.data);
+    await getScoresFromAPI();
+  } catch (error) {
+    console.error(error);
+  }
+};
