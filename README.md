@@ -43,7 +43,7 @@ In this project I created a nice to-do-list app to track my daily tasks
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://majdalkilany.github.io/To-Do-List/dist/)
+- [Live Demo Link](https://majdalkilany.github.io/Leaderboard-/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +91,7 @@ Open index.html using a live server.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/SiveMdluli/Leaderboard/issues).
+Feel free to check the [issues page](https://github.com/majdalkilany/Leaderboard-/issues/2).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
