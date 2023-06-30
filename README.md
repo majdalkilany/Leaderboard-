@@ -24,9 +24,9 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 
-# 📖 Mobile First Project <a name="about-project"></a>
+# 📖 Leaderboard <a name="about-project"></a>
 
-In this project I created a nice to-do-list app to track my daily tasks
+- leaderBoard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved
 
 ## 🛠 Built With <a name="built-with"></a>
 
